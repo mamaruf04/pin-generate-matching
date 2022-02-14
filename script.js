@@ -28,3 +28,17 @@ document.getElementById('key-pad').addEventListener('click',function (event) {
     calcInput.value = newNumber;
     }
 })
+function verifyPiy() {
+    const pin = document.getElementById('display-pin').value;
+    const typedNumbers = document.getElementById('typed-numbers').value;
+    const fail = document.getElementById('notify-fail');
+    const success = document.getElementById('notify-success');
+    if(pin == typedNumbers){
+        success.style.display='block';
+        fail.style.display = 'none';
+    }
+    else{
+        fail.style.display = 'block';
+        success.style.display='none';
+    }
+}
